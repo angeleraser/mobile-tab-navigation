@@ -21,6 +21,8 @@ phoneNavbar.addEventListener("click", function ({ target }) {
   const { menu } = target.dataset;
 
   if (menu) {
+    phoneNavbar.querySelector(".active").classList.remove("active");
+    target.classList.add("active");
     phoneScreen.querySelector(".show").classList.remove("show");
     phoneScreen.querySelector(`[data-screen="${menu}"]`).classList.add("show");
   }

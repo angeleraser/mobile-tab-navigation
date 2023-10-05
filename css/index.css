@@ -88,6 +88,7 @@
   pointer-events: none;
 }
 
-.phone-menu-item button:hover {
+.phone-menu-item button:hover,
+.phone-menu-item button.active {
   color: var(--purple);
 }
