@@ -1,0 +1,93 @@
+@import url("./reset.min.css");
+
+:root {
+  --lightpurple: rgba(155, 89, 182, 0.7);
+  --purple: #8e44ad;
+  --gray: #777;
+  --white: #fff;
+  --lightgray: #eee;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  min-width: 320px;
+  padding: 20px;
+  background-color: var(--lightpurple);
+  font-family: var(--font-family);
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  min-height: 320px;
+  width: 100%;
+  max-width: 340px;
+  border: 4px solid var(--lightgray);
+  background-color: var(--white);
+  border-radius: 16px;
+}
+
+.phone-screen {
+  flex: 100%;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.phone-screen figure {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.4s opacity;
+}
+
+.phone-screen figure.show {
+  opacity: 1;
+}
+
+.phone-screen figure,
+.phone-screen img {
+  width: 100%;
+  height: 100%;
+}
+
+.phone-screen img {
+  object-fit: cover;
+}
+
+.phone-navbar {
+  padding: 12px;
+}
+
+.phone-menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.phone-menu-item button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-family);
+  cursor: pointer;
+}
+
+.phone-menu-item button > * {
+  pointer-events: none;
+}
+
+.phone-menu-item button:hover {
+  color: var(--purple);
+}
